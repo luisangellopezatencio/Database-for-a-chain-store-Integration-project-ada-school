@@ -39,6 +39,7 @@ CREATE TABLE stock (
 	Sucursal_ID INTEGER,
 	Producto_ID INTEGER,
 	Total REAL NOT NULL,
+	UNIQUE (sucursal_id, producto_id),
 	FOREIGN KEY (Sucursal_ID) REFERENCES sucursal(ID),
 	FOREIGN KEY (Producto_ID) REFERENCES producto(ID)
 );
